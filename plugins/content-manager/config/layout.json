@@ -1,0 +1,15 @@
+{
+  "product": {
+    "attributes": {
+      "Name": {
+        "appearance": ""
+      },
+      "Description": {
+        "appearance": ""
+      },
+      "Price": {
+        "appearance": ""
+      }
+    }
+  }
+}
