@@ -1,9 +1,19 @@
+type Employee {
+  _id: ID!
+  createdAt: String!
+  updatedAt: String!
+  Name: String
+  Emp_ID: Int
+  Email: String
+  Joining_date: String
+}
+
 """
 The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
 """
 scalar JSON
 
-union Morph = Product | UploadFile | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser
+union Morph = Employee | Product | UploadFile | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser
 
 type Product {
   _id: ID!
@@ -15,6 +25,8 @@ type Product {
 }
 
 type Query {
+  employee(id: ID!): Employee
+  employees(sort: String, limit: Int, start: Int, where: JSON): [Employee]
   product(id: ID!): Product
   products(sort: String, limit: Int, start: Int, where: JSON): [Product]
   files(sort: String, limit: Int, start: Int, where: JSON): [UploadFile]

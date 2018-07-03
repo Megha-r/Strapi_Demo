@@ -11,5 +11,21 @@
         "appearance": ""
       }
     }
+  },
+  "employee": {
+    "attributes": {
+      "Name": {
+        "appearance": ""
+      },
+      "Emp_ID": {
+        "appearance": ""
+      },
+      "Email": {
+        "appearance": ""
+      },
+      "Joining Date": {
+        "appearance": ""
+      }
+    }
   }
 }

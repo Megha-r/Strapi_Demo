@@ -1,0 +1,25 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "employee",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Emp_ID": {
+      "type": "integer"
+    },
+    "Email": {
+      "type": "email"
+    },
+    "Joining_date": {
+      "type": "date"
+    }
+  }
+}
