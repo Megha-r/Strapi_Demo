@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/cmslabels",
+      "handler": "Cmslabel.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cmslabels/count",
+      "handler": "Cmslabel.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cmslabels/:_id",
+      "handler": "Cmslabel.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/cmslabels",
+      "handler": "Cmslabel.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/cmslabels/:_id",
+      "handler": "Cmslabel.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/cmslabels/:_id",
+      "handler": "Cmslabel.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

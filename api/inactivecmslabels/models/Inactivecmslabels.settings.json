@@ -1,0 +1,45 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "inactivecmslabels",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "Status": {
+      "default": false,
+      "type": "boolean"
+    },
+    "code": {
+      "default": "",
+      "unique": true,
+      "type": "string",
+      "required": true
+    },
+    "en": {
+      "default": "",
+      "unique": true,
+      "type": "string",
+      "required": true
+    },
+    "fr": {
+      "default": "",
+      "type": "string"
+    },
+    "es": {
+      "default": "",
+      "type": "string"
+    },
+    "routeCode": {
+      "default": "",
+      "type": "array"
+    }
+  }
+}
+
+
+
+

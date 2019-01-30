@@ -1,0 +1,41 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "cmsbuttons",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "code": {
+      "default": "",
+      "unique": true,
+      "type": "string",
+      "required": true
+    },
+    "en": {
+      "default": "",
+      "unique": true,
+      "type": "string",
+      "required": true
+    },
+    "es": {
+      "default": "",
+      "unique": true,
+      "type": "string",
+      "required": true
+    },
+    "fr": {
+      "default": "",
+      "unique": true,
+      "type": "string",
+      "required": true
+    },
+    "routeCode": {
+      "default": "",
+      "type": "array"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/cmsbuttons",
+      "handler": "Cmsbuttons.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cmsbuttons/count",
+      "handler": "Cmsbuttons.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cmsbuttons/:_id",
+      "handler": "Cmsbuttons.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/cmsbuttons",
+      "handler": "Cmsbuttons.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/cmsbuttons/:_id",
+      "handler": "Cmsbuttons.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/cmsbuttons/:_id",
+      "handler": "Cmsbuttons.destroy",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
