@@ -18,7 +18,6 @@ module.exports = {
     if (ctx.query._q) {
       return strapi.services.inactivecmslabels.search(ctx.query);
     } else {
-      await console.log('--------- Inside find of inactiveController --------', ctx.query);
       return strapi.services.inactivecmslabels.fetchAll(ctx.query);
     }
   },
@@ -33,8 +32,6 @@ module.exports = {
     if (!ctx.params._id.match(/^[0-9a-fA-F]{24}$/)) {
       return ctx.notFound();
     }
-    await console.log('------inactivecmslabels controllers findOne------>');
-
 
     return strapi.services.inactivecmslabels.fetch(ctx.params);
   },

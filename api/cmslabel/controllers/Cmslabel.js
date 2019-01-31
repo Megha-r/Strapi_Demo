@@ -29,7 +29,6 @@ module.exports = {
    */
 
   findOne: async (ctx) => {
-    console.log('------ in cmslabels controller findOne------------------------------------------------>', ctx)
     if (!ctx.params._id.match(/^[0-9a-fA-F]{24}$/)) {
       return ctx.notFound();
     }

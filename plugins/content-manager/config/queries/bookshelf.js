@@ -2,7 +2,6 @@ const _ = require('lodash');
 
 module.exports = {
   find: async function (params, populate, raw = false) {
-    console.log('-----------find in bookshelf--------',params);
     return this.query(function(qb) {
       _.forEach(params.where, (where, key) => {
         if (_.isArray(where.value) && where.symbol !== 'IN') {
@@ -48,11 +47,7 @@ module.exports = {
   },
 
   search: async function (params, populate, raw = false) {
-    console.log('------------params-----------', params);
-    console.log('------------populate-----------', populate);
-    console.log('------------raw-----------', raw);
-
-
+  
     const associations = this.associations.map(x => x.alias);
     const searchText = Object.keys(this._attributes)
       .filter(attribute => attribute !== this.primaryKey && !associations.includes(attribute))

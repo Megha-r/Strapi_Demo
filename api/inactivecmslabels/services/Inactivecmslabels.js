@@ -18,7 +18,6 @@ module.exports = {
    */
 
   fetchAll: (params) => {
-     console.log('------------- in inactivecmslabels sevices fetchAll----->', params);
 
     // Convert `params` object to filters compatible with Mongo.
     const filters = strapi.utils.models.convertParams('inactivecmslabels', params);
@@ -27,7 +26,6 @@ module.exports = {
       .filter(ast => ast.autoPopulate !== false)
       .map(ast => ast.alias)
       .join(' ');
-      console.log('--- populate---->', populate);
 
     return Inactivecmslabels
       .find()
@@ -45,7 +43,6 @@ module.exports = {
    */
 
   fetch: (params) => {
-    console.log('----------- in inactivelabels services fetch----------->', params);
     // Select field to populate.
     const populate = Inactivecmslabels.associations
       .filter(ast => ast.autoPopulate !== false)

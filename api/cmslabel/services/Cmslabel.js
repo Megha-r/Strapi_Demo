@@ -43,7 +43,6 @@ module.exports = {
 
   fetch: (params) => {
     // Select field to populate.
-    console.log('-------- cmslabel fetch--------', params)
     const populate = Cmslabel.associations
       .filter(ast => ast.autoPopulate !== false)
       .map(ast => ast.alias)
@@ -94,9 +93,7 @@ module.exports = {
    */
 
   edit: async (params, values) => {
-    console.log('-=-=-=-=-=-=-=-params-=-=-=-=', params);
-    console.log('-=-=-=-=-=-=-=-values-=-=-=-=', values);
-
+   
     // Extract values related to relational data.
     const relations = _.pick(values, Cmslabel.associations.map(a => a.alias));
     const data = _.omit(values, Cmslabel.associations.map(a => a.alias));

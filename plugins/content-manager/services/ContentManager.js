@@ -52,7 +52,6 @@ module.exports = {
   },
 
   fetch: async (params, source, populate, raw = true) => {
-    console.log('-----------fetch', params);
     return await strapi.query(params.model, source).findOne({
       id: params.id
     }, populate, raw);
@@ -107,7 +106,6 @@ module.exports = {
   },
 
   edit: async (params, values, source) => {
-
     if (values.hasOwnProperty('fields') && values.hasOwnProperty('files') ) {
       // Silent recursive parser.
       const parser = (value) => {
@@ -138,25 +136,6 @@ module.exports = {
         id: params.id,
         values
       });
-
-      // const id= strapi..
-      // console.log("strapi------------------>", strapi.controllers.cmslabel.findOne);
-      // if(params.model === 'inactivecmslabels' && values.Status === true)
-      // {     
-      //   params.model = 'cmslabel';
-      //   params.id = '5c35b9993609987b47b9f173';
-
-      //   //  const megha = await strapi.query(params.model, source).fetch({
-      //   //   code: values.code
-      //   // });
-        
-      //   const data = {...values};
-      //   delete data.fields;
-      //   delete data._id;
-      //   delete data.id;
-        
-      //   await strapi.plugins['content-manager'].services['contentmanager'].edit(params, data, source);
-      // }
 
       // Then, request plugin upload.
       if (strapi.plugins.upload) {
