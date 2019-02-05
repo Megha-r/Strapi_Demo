@@ -168,8 +168,7 @@
     "lint:watch": "node node_modules/eslint-watch/bin/esw -w ./src --ext .jsx --ext .js",
     "lint:watch:fix": "node node_modules/eslint-watch/bin/esw -w --fix ./src --ext .jsx --ext .js",
     "prod": "NODE_ENV=production webpack --mode production",
-    "start": "babel src -d build",
-    "postinstall": "npm run clean && npm i && babel src -d build",
+    "start": "react-scripts",
     "clean": "rimraf -rf build",
     "test": "jest"
   },
