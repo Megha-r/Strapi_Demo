@@ -10,7 +10,7 @@ class ContentProvider extends React.Component {
     this.state = {
       cmsContent: {},
       cmsError: '',
-      loading: false
+      loading: false,
     }
   }
 
@@ -18,13 +18,13 @@ class ContentProvider extends React.Component {
   
 
   getdata = async (data) => {
-    const { language, routeCode } = data
+    const { language,collectionName, routeCode } = data
     this.setState({ loading: true })
-    if ((language && language === '') || (routeCode && routeCode === '')) {
+    if ((language && language === '') || (routeCode && routeCode === '') ||  (collectionName && collectionName === '')) {
       const er = 'Specify the correct route and language key'
       this.setState({ cmsError: er, loading: false })
     } else {
-      const response = await axios(`http://ds-taxonomy01-dev-dan-strapi.ds-taxonomy01-dev.svc.cluster.local?collectionName=${collection}?routeCode=${routeCode}`)
+      const response = await axios(`http://localhost:1337?collectionName=${collectionName}?routeCode=${routeCode}`)
       let data = response.data
       const obj = {}
       data.forEach(element => {
