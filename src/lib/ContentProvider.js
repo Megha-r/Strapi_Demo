@@ -24,7 +24,8 @@ class ContentProvider extends React.Component {
       const er = 'Specify the correct route and language key'
       this.setState({ cmsError: er, loading: false })
     } else {
-      const response = await axios(`http://localhost:1337?collectionName=${collectionName}?routeCode=${routeCode}`)
+      //`http://localhost:1337?collectionName=${collectionName}?routeCode=${routeCode}`
+      const response = await axios(`http://localhost:1337/?collectionName=${collectionName}?routeCode=${routeCode}`)
       let data = response.data
       const obj = {}
       data.forEach(element => {
