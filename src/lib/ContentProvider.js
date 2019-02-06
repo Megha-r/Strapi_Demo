@@ -25,7 +25,7 @@ class ContentProvider extends React.Component {
       this.setState({ cmsError: er, loading: false })
     } else {
       //`http://localhost:1337?collectionName=${collectionName}?routeCode=${routeCode}`
-      const response = await axios(`http://localhost:1337/?collectionName=${collectionName}?routeCode=${routeCode}`)
+      const response = await axios(`http://localhost:1337/${collectionName}?routeCode=${routeCode}`)
       let data = response.data
       const obj = {}
       data.forEach(element => {
